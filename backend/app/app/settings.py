@@ -42,9 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',
-    'socketapp',
+    # 'socketapp',
     'rest_framework',
     'corsheaders',
+    'django_crontab',
+    'socketapp.apps.SocketappConfig'
+]
+
+CRONJOBS = [
+    ('*/1 * * * *', 'socketapp.utils.cron_job_scrape_data')
 ]
 
 MIDDLEWARE = [
@@ -135,3 +141,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
