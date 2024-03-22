@@ -40,3 +40,19 @@
 @keyframes l26 {
   100% {transform:rotate(1turn)}
 }
+
+.text-center {
+  text-align: center;
+}
+
+.lg-font {
+  font-size: 5rem;
+}
+
+.container {
+  padding: 1rem 4rem;
+}
+
+.color-green {
+  color: green
+}

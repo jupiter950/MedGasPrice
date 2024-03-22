@@ -37,17 +37,16 @@ function App() {
   },[lastMessage])
 
   return (
-    <div className="App">
+    <div className="App container">
       {
         isLoading && (
           <>
             <div className="loader"></div>
-            <div className='background'></div>
+            <div className='background'></div>  
           </>
         )
       }
-      {lastMessage && JSON.parse(lastMessage.data).status}
-      <p>Med Price: { medPrice && medPrice} nAVAX</p>
+      <p className='text-center lg-font'>Med Price: <span className='color-green'>{ medPrice && medPrice}</span> nAVAX</p>
       {
         data && (
           <ReactTableUI data={data} title="gas price" />
