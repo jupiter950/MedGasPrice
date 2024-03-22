@@ -46,7 +46,7 @@ function App() {
           </>
         )
       }
-      <p className='text-center lg-font'>Med Price: <span className='color-green'>{ medPrice && medPrice}</span> nAVAX</p>
+      <p className='text-center lg-font'>Med Gas Price: <span className='color-green'>{ medPrice && medPrice}</span> nAVAX</p>
       {
         data && (
           <ReactTableUI data={data} title="gas price" />
