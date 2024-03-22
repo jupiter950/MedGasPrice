@@ -20,6 +20,10 @@ Every half hour, scrape the 'Med Gas Price' value from the network at https://sn
 
 -python manage.py runserver
 
-# 
+# Database
+
+-postsqlgres
 
 <img src="./1.png" alt="Alt text" title="Optional title">
+
+- Every 30 minutes, data be updated and stored.
