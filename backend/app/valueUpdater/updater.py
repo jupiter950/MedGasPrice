@@ -5,5 +5,5 @@ from valueUpdater import valueScrape
 
 def start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(valueScrape.crape_data, 'interval', minutes=0.3)
+    scheduler.add_job(valueScrape.crape_data, 'interval', minutes=30)
     scheduler.start()

@@ -24,13 +24,13 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def send_gas_data(self):
         while True:
             await self.send_gas_data_once()
-            await asyncio.sleep(10)
+            await asyncio.sleep(1800)
 
     async def send_gas_data_once(self):
         try:
             self.count = self.count + 1
-            await self.delete_gas_data()
-            await self.get_gas_data()
+            # await self.delete_gas_data()
+            # await self.get_gas_data()
             await self.send(text_data=json.dumps({'status' : self.count}))
         except Exception as e:
             print("Error occurred while sending gas data:", e)
